@@ -31,7 +31,7 @@
 
 .navbar.scrolling-active {
     background-color: #F26B0F;
-    padding: 15px 0 15px;
+    padding: 10px 0 10px;
 }
 
 .navbar.scrolling-active .box-navbar .brand h1 {
@@ -90,7 +90,7 @@
 }
 
 .navbar .box-navbar .navigation ul li:hover a {
-    color: #7E1891;
+    color: #1B1833;
 }
 
 .navbar .box-navbar .navigation ul li a {
@@ -120,12 +120,67 @@
     display: none;
 }
 
+
+
 /* Hero Section */
 .hero {
+    display: grid;
     width: 100%;
     min-height: 100vh;
+    place-items: center;
 }
 
+.hero .box-hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    align-items: center;
+}
+
+.hero .box-hero .box:nth-child(1) h1 {
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #1B1833;
+}
+
+.hero .box-hero .box:nth-child(1) p {
+    line-height: 2;
+    margin-bottom: 20px;
+}
+
+.hero .box-hero .box:nth-child(1) button {
+    padding: 15px 40px 15px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.hero .box-hero .box:nth-child(1) .btn1 {
+    background-color: #F26B0F;
+    color: white;
+}
+
+.hero .box-hero .box:nth-child(1) .btn2:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.hero .box-hero .box:nth-child(1) .btn1:hover {
+    background-color: #9c4308;
+}
+
+
+
+.hero .box-hero .box:nth-child(2) img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Hero About Section */
 .about {
     width: 100%;
     min-height: 100vh;
@@ -217,7 +272,7 @@
 
 
 
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 1200px) {
     .container {
         width: 80%;
         margin-inline: auto;
