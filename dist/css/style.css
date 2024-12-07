@@ -7,12 +7,10 @@
     font-family: "Poppins", sans-serif;
 }
 
-.navbar {
-    background-color: red;
-}
+
+
 
 .container {
-    background-color: green;
     width: 90%;
     margin-inline: auto;
     transition: all 0.3s linear;
@@ -23,6 +21,97 @@
 
 }
 
+.navbar {
+    padding: 5px 0 5px 0;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+}
+
+.navbar .box-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .box-navbar .brand h1 {
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+.navbar .box-navbar .brand h1:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.navbar .box-navbar .navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .box-navbar .navigation ul li {
+    list-style-type: none;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+.navbar .box-navbar .navigation ul li:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.navbar .box-navbar .navigation ul li:hover a {
+    color: #7E1891;
+}
+
+.navbar .box-navbar .navigation ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .box-navbar .navigation ul li:nth-child(5) a {
+    padding: 10px 30px 10px 30px;
+    border: none;
+    background-color: #7E1891;
+    font-weight: 600;
+    color: white;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
 
 @media screen and (min-width: 990px) {
     .container {
