@@ -26,6 +26,20 @@
     position: fixed;
     z-index: 9999;
     width: 100%;
+    transition: all .5s ease;
+}
+
+.navbar.scrolling-active {
+    background-color: #F26B0F;
+    padding: 15px 0 15px;
+}
+
+.navbar.scrolling-active .box-navbar .brand h1 {
+    color: white;
+}
+
+.navbar.scrolling-active .box-navbar .navigation ul li a {
+    color: white;
 }
 
 .navbar .box-navbar {
@@ -87,10 +101,34 @@
 .navbar .box-navbar .navigation ul li:nth-child(5) a {
     padding: 10px 30px 10px 30px;
     border: none;
-    background-color: #7E1891;
+    background-color: #FCC737;
     font-weight: 600;
     color: white;
     border-radius: 10px;
+}
+
+.navbar .box-navbar .navigation ul i {
+    display: none;
+}
+
+.navbar .box-navbar .navigation i.ri-close-line {
+    display: none;
+}
+
+/* remix Icon */
+.navbar .box-navbar .ri-menu-line {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.about {
+    width: 100%;
+    min-height: 100vh;
 }
 
 
@@ -112,6 +150,72 @@
 
 
 /* Responsive */
+
+@media screen and (max-width: 990px) {
+    .navbar.scrolling-active .box-navbar i.ri-menu-line {
+        color: white;
+    }
+
+    .navbar .box-navbar i.ri-menu-line {
+        display: block;
+        font-size: 20px;
+        color: #1B1833;
+    }
+
+    .navbar .box-navbar .navigation {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        width: 250px;
+        height: 100vh;
+        background-color: #F26B0F;
+        transition: all .5s ease;
+    }
+
+    .navbar .box-navbar .navigation.menu-active {
+        right: 0;
+    }
+
+    .navbar .box-navbar .navigation ul {
+        /* display: flex; */
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 30px;
+        padding: 70px 30px 0 0;
+
+    }
+
+    .navbar .box-navbar .navigation i.ri-close-line {
+        display: block;
+        background-color: #1B1833;
+        padding: 10px;
+        border-radius: 100%;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: -20px;
+
+    }
+
+    .navbar .box-navbar .navigation ul li a {
+        color: white;
+    }
+
+    .navbar .box-navbar .navigation ul li i {
+        display: inline-block;
+        color: #1B1833;
+        margin-inline: 10px;
+    }
+
+    .navbar .box-navbar .navigation ul li:nth-child(5) a {
+        background-color: transparent;
+        padding: 0;
+    }
+
+
+}
+
+
 
 @media screen and (min-width: 990px) {
     .container {
