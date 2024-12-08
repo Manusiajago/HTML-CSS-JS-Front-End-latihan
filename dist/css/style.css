@@ -133,7 +133,7 @@
 .hero .box-hero {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 40px;
+    column-gap: 20px;
     align-items: center;
 }
 
@@ -207,6 +207,15 @@
 /* Responsive */
 
 @media screen and (max-width: 990px) {
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero .box-hero .box:nth-child(1) h1 {
+        font-size: 46px;
+    }
+
     .navbar.scrolling-active .box-navbar i.ri-menu-line {
         color: white;
     }
@@ -267,8 +276,95 @@
         padding: 0;
     }
 
+    .hero .box-hero {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(auto auto);
+        /* Coba dulu dipakein auto */
+    }
+
+    .hero .box-hero .box:nth-child(1) {
+        order: 2;
+        text-align: center;
+    }
+
+    .hero .box-hero .box:nth-child(2) {
+        order: 1;
+        text-align: center;
+    }
+
+    .hero .box-hero .box:nth-child(2) img {
+        width: 500px;
+    }
+
+
 
 }
+
+
+@media screen and (max-width: 768px) {
+    .hero .box-hero {
+        row-gap: 30px;
+    }
+
+    .hero .box-hero .box:nth-child(1) h1 {
+        font-size: 42px;
+    }
+
+    .hero .box-hero .box:nth-child(2) img {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .hero .box-hero .box:nth-child(1) h1 {
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width: 370px) {
+
+    /* .hero {
+        padding-top: 100px;
+    }
+
+    .box .box-hero {
+        grid-template-rows: repeat(2, auto);
+    } */
+
+    .hero .box-hero .box:nth-child(1) h1 {
+        font-size: 20px;
+
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .hero .box-hero .box:nth-child(2) img {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .hero .box-hero .box:nth-child(2) {
+        align-self: flex-end;
+    }
+
+    /* .hero {
+        padding-top: 0;
+    } */
+
+    .hero .box-hero {
+        gap: 30px;
+    }
+
+    .hero .box-hero .box:nth-child(1) h1 {
+        font-size: 28px;
+    }
+
+    .hero .box-hero .box:nth-child(1) button {
+        margin-bottom: 10px;
+    }
+}
+
 
 
 
