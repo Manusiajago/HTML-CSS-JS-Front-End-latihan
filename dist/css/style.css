@@ -184,8 +184,79 @@
 .about {
     width: 100%;
     min-height: 100vh;
+    display: grid;
+    place-items: center;
+
 }
 
+.about .container .box-about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    align-items: center;
+}
+
+
+.about .container .box-about .box:nth-child(1) {
+    display: grid;
+    grid-template-areas:
+        'item1 item2'
+        'item3 item4'
+    ;
+    gap: 10px;
+}
+
+.about .container .box-about .box:nth-child(1) .item1 {
+    grid-area: item1;
+}
+
+.about .container .box-about .box:nth-child(1) .item2 {
+    grid-area: item2;
+}
+
+.about .container .box-about .box:nth-child(1) .item3 {
+    grid-area: item3;
+}
+
+.about .container .box-about .box:nth-child(1) .item4 {
+    grid-area: item4;
+}
+
+.about .container .box-about .box:nth-child(1) img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about .container .box-about .box:nth-child(2) h1 {
+    font-size: 40px;
+    color: #1B1833;
+    margin-bottom: 10px;
+}
+
+.about .container .box-about .box:nth-child(2) p {
+    line-height: 2;
+    font-size: 14px;
+    color: #1B1833;
+    margin-bottom: 10px;
+}
+
+.about .container .box-about .box:nth-child(2) button {
+    padding: 15px 40px 15px 40px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    background-color: #F26B0F;
+    color: white;
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.about .container .box-about .box:nth-child(2) button:hover {
+    background-color: #9c4308;
+
+}
 
 
 
